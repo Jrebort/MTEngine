@@ -15,15 +15,21 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Application.h">
+    <ClInclude Include="src\MTEngine\Application.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="src\MTEngine\Core.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\MTEngine.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MTEngine\EntryPoint.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Application.cpp">
+    <ClCompile Include="src\MTEngine\Application.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
