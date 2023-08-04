@@ -1,0 +1,3 @@
+[submodule "MTEngine/vendor/spdlog"]
+	path = MTEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
