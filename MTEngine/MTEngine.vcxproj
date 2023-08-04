@@ -92,7 +92,7 @@
       <ImportLibrary>..\bin\Debug-windows-x86_64\MTEngine\MTEngine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>COPY /Y ../bin/Debug-windows-x86_64/MTEngine/MTEngine.dll ../bin/Debug-windows-x86_64/Example</Command>
+      <Command>IF EXIST ..\bin\Debug-windows-x86_64\MTEngine\MTEngine.dll\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\MTEngine\MTEngine.dll ..\bin\Debug-windows-x86_64\Example &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\MTEngine\MTEngine.dll ..\bin\Debug-windows-x86_64\Example &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -113,7 +113,7 @@
       <ImportLibrary>..\bin\Release-windows-x86_64\MTEngine\MTEngine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>COPY /Y ../bin/Release-windows-x86_64/MTEngine/MTEngine.dll ../bin/Release-windows-x86_64/Example</Command>
+      <Command>IF EXIST ..\bin\Release-windows-x86_64\MTEngine\MTEngine.dll\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\MTEngine\MTEngine.dll ..\bin\Release-windows-x86_64\Example &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\MTEngine\MTEngine.dll ..\bin\Release-windows-x86_64\Example &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -134,7 +134,7 @@
       <ImportLibrary>..\bin\Dist-windows-x86_64\MTEngine\MTEngine.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
-      <Command>COPY /Y ../bin/Dist-windows-x86_64/MTEngine/MTEngine.dll ../bin/Dist-windows-x86_64/Example</Command>
+      <Command>IF EXIST ..\bin\Dist-windows-x86_64\MTEngine\MTEngine.dll\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\MTEngine\MTEngine.dll ..\bin\Dist-windows-x86_64\Example &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\MTEngine\MTEngine.dll ..\bin\Dist-windows-x86_64\Example &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>

@@ -39,7 +39,7 @@ project "MTEngine"
 		}
 
 		postbuildcommands{
-			("COPY /Y %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Example")
+			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Example")
 		}
 
 	filter "configurations:Debug"

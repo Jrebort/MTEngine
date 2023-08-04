@@ -1,7 +1,7 @@
 # Dir
 .vs
 bin/
-bin-inter/
+bin-int/
 
 # Filter
 *.user

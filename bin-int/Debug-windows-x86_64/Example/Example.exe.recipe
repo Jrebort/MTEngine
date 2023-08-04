@@ -2,10 +2,10 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>H:\Engine\MTEngine\bin\Debug-windows-x86_64\MTEngine\MTEngine.dll</FullPath>
+      <FullPath>C:\Users\Yoyo\dev\MTEngine\bin\Debug-windows-x86_64\MTEngine\MTEngine.dll</FullPath>
     </ProjectOutput>
     <ProjectOutput>
-      <FullPath>H:\Engine\MTEngine\bin\Debug-windows-x86_64\Example\Example.exe</FullPath>
+      <FullPath>C:\Users\Yoyo\dev\MTEngine\bin\Debug-windows-x86_64\Example\Example.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

@@ -1,4 +1,3 @@
-﻿  MTEngine.vcxproj -> H:\Engine\MTEngine\bin\Debug-windows-x86_64\MTEngine\MTEngine.dll
-  命令语法不正确。
-C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(160,5): error MSB3073: 命令“COPY /Y ../bin/Debug-windows-x86_64/MTEngine/MTEngine.dll ../bin/Debug-windows-x86_64/Example
-C:\Program Files\Microsoft Visual Studio\2022\Professional\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(160,5): error MSB3073: :VCEnd”已退出，代码为 1。
+﻿  Application.cpp
+     Creating library ..\bin\Debug-windows-x86_64\MTEngine\MTEngine.lib and object ..\bin\Debug-windows-x86_64\MTEngine\MTEngine.exp
+  MTEngine.vcxproj -> C:\Users\Yoyo\dev\MTEngine\bin\Debug-windows-x86_64\MTEngine\MTEngine.dll
