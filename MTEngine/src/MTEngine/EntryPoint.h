@@ -8,7 +8,7 @@ extern MTEngine::Application* MTEngine::CreateApplication();
 int main(int argc, char** argv) {
 
 	MTEngine::Log::init();
-	MTEngine::Log::GetCoreLogger()->warn("Initialized MTEngine!");
+	MT_CORE_WARN("Initialized MTEngine!");
 
 	auto app = MTEngine::CreateApplication();
 	app->run();

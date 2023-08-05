@@ -4,7 +4,7 @@ class Example : public MTEngine::Application
 {
 public:
 	Example() {
-		MTEngine::Log::GetClientLogger()->info("Example Setup!");
+		MT_INFO("Example Setup!");
 	}
 	~Example() {
 	}	
