@@ -32,7 +32,6 @@ project "MTEngine"
 		systemversion "10.0.22000.0"
 
 
-
 		defines{
 			"MT_PLATFORM_WINDOWS",
 			"MT_BUILD_DLL"
@@ -73,7 +72,7 @@ project "Example"
 	}
 
 	includedirs{
-		"%{prj.name}/vendor/spdlog/include",
+		"MTEngine/vendor/spdlog/include",
 		"MTEngine/src"
 	}
 

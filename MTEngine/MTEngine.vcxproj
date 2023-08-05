@@ -142,9 +142,11 @@
     <ClInclude Include="src\MTEngine\Application.h" />
     <ClInclude Include="src\MTEngine\Core.h" />
     <ClInclude Include="src\MTEngine\EntryPoint.h" />
+    <ClInclude Include="src\MTEngine\Log.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MTEngine\Application.cpp" />
+    <ClCompile Include="src\MTEngine\Log.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

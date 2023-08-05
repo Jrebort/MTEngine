@@ -6,7 +6,10 @@
 extern MTEngine::Application* MTEngine::CreateApplication();
 
 int main(int argc, char** argv) {
-	printf("MT Engine");
+
+	MTEngine::Log::init();
+	MTEngine::Log::GetCoreLogger()->warn("Initialized MTEngine!");
+
 	auto app = MTEngine::CreateApplication();
 	app->run();
 	delete app;

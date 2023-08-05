@@ -16,9 +16,15 @@
     <ClInclude Include="src\MTEngine\EntryPoint.h">
       <Filter>MTEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\MTEngine\Log.h">
+      <Filter>MTEngine</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MTEngine\Application.cpp">
+      <Filter>MTEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MTEngine\Log.cpp">
       <Filter>MTEngine</Filter>
     </ClCompile>
   </ItemGroup>
