@@ -1,7 +1,7 @@
 #pragma once
 
-#include "Hazel/Events/Event.h"
-#include "Hazel/Core/KeyCodes.h"
+#include "MTEngine/Events/Event.h"
+#include "MTEngine/Core/KeyCodes.h"
 
 namespace Hazel {
 

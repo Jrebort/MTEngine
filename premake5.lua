@@ -23,13 +23,14 @@ project "MTEngine"
 	}
 
 	includedirs{
+		"%{prj.name}/src";
 		"%{prj.name}/vendor/spdlog/include";
 	}
 
 	filter "system:windows"
 		cppdialect "c++17"
 		staticruntime "on"
-		systemversion "10.0.22000.0"
+		systemversion "latest"
 
 
 		defines{

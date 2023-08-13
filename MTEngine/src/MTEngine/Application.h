@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Core.h"
+#include "Events/Event.h"
 
 namespace MTEngine {
 
@@ -9,6 +10,7 @@ namespace MTEngine {
 	public:
 		Application();
 	 	virtual ~Application();
+
 		void run();
 	};
 

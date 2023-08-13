@@ -2,6 +2,7 @@
 
 #include "MTEngine/Core.h"
 #include <string>
+#include <sstream>
 #include <functional>
 
 namespace MTEngine {

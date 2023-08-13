@@ -1,8 +1,8 @@
 #pragma once
 
-#include "Hazel/Events/Event.h"
+#include "MTEngine/Events/Event.h"
 
-namespace Hazel {
+namespace MTEngine {
 
 	class WindowResizeEvent : public Event
 	{

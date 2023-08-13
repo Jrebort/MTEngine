@@ -4,6 +4,9 @@
     <Filter Include="MTEngine">
       <UniqueIdentifier>{1C049176-08D1-EB81-31EA-D9291D162110}</UniqueIdentifier>
     </Filter>
+    <Filter Include="MTEngine\Events">
+      <UniqueIdentifier>{80786DF3-EC03-DBB7-F514-5EAC611F37B8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MTEngine.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\MTEngine\EntryPoint.h">
       <Filter>MTEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MTEngine\Events\ApplicationEvent.h">
+      <Filter>MTEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MTEngine\Events\Event.h">
+      <Filter>MTEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MTEngine\Events\KeyEvent.h">
+      <Filter>MTEngine\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MTEngine\Events\MouseEvent.h">
+      <Filter>MTEngine\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\MTEngine\Log.h">
       <Filter>MTEngine</Filter>
