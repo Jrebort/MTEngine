@@ -1,13 +1,11 @@
 #pragma once
 
+#include "MTEngine/mtpch.h"
 #include "MTEngine/Core.h"
-#include <string>
-#include <sstream>
-#include <functional>
 
 namespace MTEngine {
 
-	// Events in Hazel are currently blocking, meaning when an event occurs it
+	// Events in MTEngine are currently blocking, meaning when an event occurs it
 	// immediately gets dispatched and must be dealt with right then an there.
 	// For the future, a better strategy might be to buffer events in an event
 	// bus and process them during the "event" part of the update stage.
