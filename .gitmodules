@@ -1,0 +1,15 @@
+[submodule "MTEngine/vendor/spdlog"]
+	path = MTEngine/vendor/spdlog
+	url = https://github.com/gabime/spdlog.git
+[submodule "MTEngine/vendor/imgui"]
+	path = MTEngine/vendor/imgui
+	url = https://github.com/jrebort/imgui
+[submodule "MTEngine/vendor/glfw"]
+	path = MTEngine/vendor/glfw
+	url = https://github.com/jrebort/glfw
+[submodule "MTEngine/vendor/ImGuizmo"]
+	path = MTEngine/vendor/ImGuizmo
+	url = https://github.com/jrebort/ImGuizmo
+[submodule "MTEngine/vendor/box2d"]
+	path = MTEngine/vendor/box2d
+	url = https://github.com/jrebort/box2d
