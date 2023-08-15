@@ -2,6 +2,7 @@
 
 #include "Core.h"
 #include "Events/Event.h"
+#include "Window.h"
 
 namespace MTEngine {
 
@@ -12,7 +13,11 @@ namespace MTEngine {
 	 	virtual ~Application();
 
 		void run();
+	private:
+		std::unique_ptr<Window> m_Window;
+		bool m_Running = true;
 	};
+
 
 	// To be defined in CLIENT
 	Application* CreateApplication();

@@ -1,6 +1,6 @@
 #pragma once
 
-#include "MTEngine/mtpch.h"
+#include "mtpch.h"
 #include "MTEngine/Core.h"
 
 namespace MTEngine {

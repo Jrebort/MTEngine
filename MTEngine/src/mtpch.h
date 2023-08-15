@@ -12,6 +12,8 @@
 #include <unordered_map>
 #include <unordered_set>
 
+#include "MTEngine/Log.h"
+
 #ifdef MT_PLATFORM_WINDOWS
 	#include <windows.h>
 #endif

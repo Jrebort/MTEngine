@@ -11,7 +11,7 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "MTEngine/vendor/glfw/include"
-include "MTEngine/vendor/GLFW"
+include "MTEngine/vendor/glfw"
 
 project "Example"
 	location "example"	
@@ -78,9 +78,9 @@ project "MTEngine"
 	}
 
 	includedirs{
-		"%{prj.name}/src";
-		"%{prj.name}/vendor/spdlog/include";
-		"${IncludeDir.GLFW}"
+		"%{prj.name}/src",
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
 	}
 
 	links{

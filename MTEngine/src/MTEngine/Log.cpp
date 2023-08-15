@@ -1,3 +1,4 @@
+#include "mtpch.h"
 #include "Log.h"
 
 namespace MTEngine {

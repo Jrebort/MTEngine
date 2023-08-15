@@ -7,6 +7,12 @@
     <Filter Include="MTEngine\Events">
       <UniqueIdentifier>{80786DF3-EC03-DBB7-F514-5EAC611F37B8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\MTEngine.h" />
@@ -34,9 +40,13 @@
     <ClInclude Include="src\MTEngine\Log.h">
       <Filter>MTEngine</Filter>
     </ClInclude>
-    <ClInclude Include="src\MTEngine\mtpch.h">
+    <ClInclude Include="src\MTEngine\window.h">
       <Filter>MTEngine</Filter>
     </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\mtpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\MTEngine\Application.cpp">
@@ -45,8 +55,9 @@
     <ClCompile Include="src\MTEngine\Log.cpp">
       <Filter>MTEngine</Filter>
     </ClCompile>
-    <ClCompile Include="src\MTEngine\mtpch.cpp">
-      <Filter>MTEngine</Filter>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
+    <ClCompile Include="src\mtpch.cpp" />
   </ItemGroup>
 </Project>
