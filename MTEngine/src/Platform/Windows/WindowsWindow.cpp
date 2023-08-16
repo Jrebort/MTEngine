@@ -5,6 +5,8 @@
 #include "MTEngine/Events/MouseEvent.h"
 #include "MTEngine/Events/KeyEvent.h"
 
+#include <glad/glad.h>
+
 namespace MTEngine {
 
 	static bool s_GLFWInitialized = false;
@@ -50,6 +52,8 @@ namespace MTEngine {
 
 		m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
 		glfwMakeContextCurrent(m_Window);
+		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+		MT_CORE_ASSERT(status, "Failed to initialize Glad!");
 		glfwSetWindowUserPointer(m_Window, &m_Data);
 		SetVSync(true);	
 

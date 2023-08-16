@@ -1,5 +1,6 @@
 workspace "MTEngine"
 architecture "x64"
+startproject "Example"
 
 configurations{
 	"Debug",
@@ -11,7 +12,13 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 IncludeDir = {}
 IncludeDir["GLFW"] = "MTEngine/vendor/glfw/include"
+IncludeDir["Glad"] = "MTEngine/vendor/glad/include"
+IncludeDir["ImGui"] = "MTEngine/vendor/imgui"
+
 include "MTEngine/vendor/glfw"
+include "MTEngine/vendor/glad"
+include "MTEngine/vendor/imgui"
+
 
 project "Example"
 	location "example"	
@@ -40,7 +47,7 @@ project "Example"
 	filter "system:windows"
 		cppdialect "c++17"
 		staticruntime "on"
-		systemversion "10.0.22000.0"
+		systemversion "latest"
 
 		defines{
 			"MT_PLATFORM_WINDOWS",
@@ -83,11 +90,15 @@ project "MTEngine"
 	includedirs{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}"
 	}
 
 	links{
 		"GLFW",
+		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 
@@ -99,7 +110,8 @@ project "MTEngine"
 
 		defines{
 			"MT_PLATFORM_WINDOWS",
-			"MT_BUILD_DLL"
+			"MT_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 		
 		postbuildcommands{
