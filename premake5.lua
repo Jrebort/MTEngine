@@ -1,5 +1,6 @@
 workspace "MTEngine"
 architecture "x64"
+startproject "Example"
 
 configurations{
 	"Debug",
@@ -17,6 +18,7 @@ IncludeDir["ImGui"] = "MTEngine/vendor/imgui"
 include "MTEngine/vendor/glfw"
 include "MTEngine/vendor/glad"
 include "MTEngine/vendor/imgui"
+
 
 project "Example"
 	location "example"	
