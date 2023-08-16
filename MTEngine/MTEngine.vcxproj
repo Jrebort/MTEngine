@@ -84,6 +84,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MDd %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -107,6 +108,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -130,6 +132,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalOptions>/MD %(AdditionalOptions)</AdditionalOptions>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <ExternalWarningLevel>Level3</ExternalWarningLevel>
     </ClCompile>
@@ -144,6 +147,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="src\Layer.h" />
     <ClInclude Include="src\MTEngine.h" />
     <ClInclude Include="src\MTEngine\Application.h" />
     <ClInclude Include="src\MTEngine\Core.h" />
@@ -152,13 +156,16 @@
     <ClInclude Include="src\MTEngine\Events\Event.h" />
     <ClInclude Include="src\MTEngine\Events\KeyEvent.h" />
     <ClInclude Include="src\MTEngine\Events\MouseEvent.h" />
+    <ClInclude Include="src\MTEngine\LayerStack.h" />
     <ClInclude Include="src\MTEngine\Log.h" />
     <ClInclude Include="src\MTEngine\window.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\mtpch.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="src\Layer.cpp" />
     <ClCompile Include="src\MTEngine\Application.cpp" />
+    <ClCompile Include="src\MTEngine\LayerStack.cpp" />
     <ClCompile Include="src\MTEngine\Log.cpp" />
     <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
     <ClCompile Include="src\mtpch.cpp">

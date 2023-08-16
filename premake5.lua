@@ -48,16 +48,19 @@ project "Example"
 
 	filter "configurations:Debug"
 		defines "MT_DEBUG"
+		buildoptions "/MDd"
 		symbols "on"
 
 
 	filter "configurations:Release"
 		defines "MT_RELEASE"
+		buildoptions "/MD"
 		symbols "on"
 
 
 	filter "configurations:Dist"
 		defines "MT_DIST"
+		buildoptions "/MD"
 		symbols "on"
 	
 
@@ -105,14 +108,17 @@ project "MTEngine"
 
 	filter "configurations:Debug"
 		defines "MT_DEBUG"
+		buildoptions "/MDd"
 		symbols "on"
 
 
 	filter "configurations:Release"
 		defines "MT_RELEASE"
+		buildoptions "/MD"
 		symbols "on"
 
 
 	filter "configurations:Dist"
 		defines "MT_DIST"
+		buildoptions "/MD"
 		symbols "on"
