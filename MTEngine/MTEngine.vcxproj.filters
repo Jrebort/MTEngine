@@ -15,7 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\Layer.h" />
     <ClInclude Include="src\MTEngine.h" />
     <ClInclude Include="src\MTEngine\Application.h">
       <Filter>MTEngine</Filter>
@@ -38,6 +37,9 @@
     <ClInclude Include="src\MTEngine\Events\MouseEvent.h">
       <Filter>MTEngine\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\MTEngine\Layer.h">
+      <Filter>MTEngine</Filter>
+    </ClInclude>
     <ClInclude Include="src\MTEngine\LayerStack.h">
       <Filter>MTEngine</Filter>
     </ClInclude>
@@ -53,8 +55,10 @@
     <ClInclude Include="src\mtpch.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\Layer.cpp" />
     <ClCompile Include="src\MTEngine\Application.cpp">
+      <Filter>MTEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MTEngine\Layer.cpp">
       <Filter>MTEngine</Filter>
     </ClCompile>
     <ClCompile Include="src\MTEngine\LayerStack.cpp">

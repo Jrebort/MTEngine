@@ -6,6 +6,8 @@
 
 #include <GLFW/glfw3.h>
 
+#include <glad/glad.h>
+
 namespace MTEngine {
 
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
