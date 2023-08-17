@@ -1,7 +1,6 @@
 #pragma once
 
 #include "MTEngine/Window.h"
-//#include "MTEngine/Renderer/GraphicsContext.h"
 
 #include <GLFW/glfw3.h>
 

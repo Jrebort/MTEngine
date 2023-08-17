@@ -10,6 +10,10 @@
 	#error MTEngine only support windows!
 #endif
 
+#ifdef MT_DEBUG
+#define MT_ENABLE_ASSERTS
+#endif
+
 #ifdef MT_ENABLE_ASSERTS
 	#define MT_ASSERT(x, ...) { if(!(x)) { MT_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }
 	#define MT_CORE_ASSERT(x, ...) { if(!(x)) { MT_CORE_ERROR("Assertion Failed: {0}", __VA_ARGS__); __debugbreak(); } }

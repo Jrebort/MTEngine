@@ -23,6 +23,7 @@ include "MTEngine/vendor/imgui"
 project "Example"
 	location "example"	
 	kind "ConsoleApp"
+	staticruntime "off"
 
 	language "C++"
 
@@ -46,7 +47,6 @@ project "Example"
 
 	filter "system:windows"
 		cppdialect "c++17"
-		staticruntime "on"
 		systemversion "latest"
 
 		defines{
@@ -55,19 +55,19 @@ project "Example"
 
 	filter "configurations:Debug"
 		defines "MT_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "on"
 
 
 	filter "configurations:Release"
 		defines "MT_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		symbols "on"
 
 
 	filter "configurations:Dist"
 		defines "MT_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		symbols "on"
 	
 
@@ -75,6 +75,7 @@ project "MTEngine"
 	location "MTEngine"
 	kind "SharedLib"
 	language "C++" 
+	staticruntime "off"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -104,7 +105,6 @@ project "MTEngine"
 
 	filter "system:windows"
 		cppdialect "c++17"
-		staticruntime "on"
 		systemversion "latest"
 
 
@@ -115,22 +115,22 @@ project "MTEngine"
 		}
 		
 		postbuildcommands{
-			("{COPY} %{cfg.buildtarget.relpath} ../bin/" .. outputdir .. "/Example")
+			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Example/\"")
 		}
 
 	filter "configurations:Debug"
 		defines "MT_DEBUG"
-		buildoptions "/MDd"
+		runtime "Debug"
 		symbols "on"
 
 
 	filter "configurations:Release"
 		defines "MT_RELEASE"
-		buildoptions "/MD"
+		runtime "Release"
 		symbols "on"
 
 
 	filter "configurations:Dist"
 		defines "MT_DIST"
-		buildoptions "/MD"
+		runtime "Release"
 		symbols "on"
