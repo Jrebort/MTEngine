@@ -14,7 +14,8 @@ namespace MTEngine {
 
 	Application* Application::s_Instance = nullptr;
 
-	Application::Application() {
+	Application::Application() 
+	{
 		MT_CORE_ASSERT(!s_Instance, "Application already exists!");
 		s_Instance = this;
 
@@ -22,7 +23,8 @@ namespace MTEngine {
 		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
 	}
 
-	Application::~Application() {
+	Application::~Application()
+	{
 
 	}
 
@@ -38,7 +40,8 @@ namespace MTEngine {
 		layer->OnAttach();
 	}
 
-	void Application::run() {
+	void Application::run()
+	{
 		while(m_Running){
 			glClearColor(1, 0, 1, 1);
 			glClear(GL_COLOR_BUFFER_BIT);
@@ -50,7 +53,8 @@ namespace MTEngine {
 		}
 	}
 
-	void Application::OnEvent(Event & e) {
+	void Application::OnEvent(Event & e)
+	{
 		EventDispatcher dispatcher(e);
 		dispatcher.Dispatch<WindowCloseEvent>(BIND_EVENT_FN(OnWindowClose));
 			
@@ -62,7 +66,8 @@ namespace MTEngine {
 		}
 	}
 
-	bool Application::OnWindowClose(WindowCloseEvent& e) {
+	bool Application::OnWindowClose(WindowCloseEvent& e)
+	{
 		m_Running = false;
 		return true;
 	}
