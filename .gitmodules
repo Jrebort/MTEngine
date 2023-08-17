@@ -13,3 +13,6 @@
 [submodule "MTEngine/vendor/box2d"]
 	path = MTEngine/vendor/box2d
 	url = https://github.com/jrebort/box2d
+[submodule "MTEngine/vendor/glm"]
+	path = MTEngine/vendor/glm
+	url = https://github.com/g-truc/glm.git

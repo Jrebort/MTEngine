@@ -14,6 +14,7 @@ IncludeDir = {}
 IncludeDir["GLFW"] = "MTEngine/vendor/glfw/include"
 IncludeDir["Glad"] = "MTEngine/vendor/glad/include"
 IncludeDir["ImGui"] = "MTEngine/vendor/imgui"
+IncludeDir["glm"] = "MTEngine/vendor/glm"
 
 include "MTEngine/vendor/glfw"
 include "MTEngine/vendor/glad"
@@ -39,6 +40,7 @@ project "Example"
 	includedirs{
 		"MTEngine/src",
 		"MTEngine/vendor/spdlog/include",
+		"%{IncludeDir.glm}"
 	}
 
 	links{
@@ -86,6 +88,8 @@ project "MTEngine"
 	files{
 		"%{prj.name}/src/**.h",
 		"%{prj.name}/src/**.cpp",
+		"%{prj.name}/vendor/glm/glm/**.hpp",
+		"%{prj.name}/vendor/glm/glm/**.inl",
 	}
 
 	includedirs{
@@ -93,7 +97,8 @@ project "MTEngine"
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
 		"%{IncludeDir.Glad}",
-		"%{IncludeDir.ImGui}"
+		"%{IncludeDir.ImGui}",
+		"%{IncludeDir.glm}"
 	}
 
 	links{
