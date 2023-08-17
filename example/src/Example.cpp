@@ -1,5 +1,7 @@
 #include <MTEngine.h>
 
+#include "imgui/imgui.h"
+
 class ExampleLayer : public MTEngine::Layer
 {
 public:
@@ -13,6 +15,13 @@ public:
 		//MT_INFO("ExampleLayer::Update");
 		if (MTEngine::Input::IsKeyPressed(MT_KEY_TAB))
 			MT_TRACE("Tab key is pressed (poll)!");
+	}
+	
+	virtual void OnImGuiRender() override
+	{
+		ImGui::Begin("Test");
+		ImGui::Text("Hello World");
+		ImGui::End();
 	}
 
 	void OnEvent(MTEngine::Event& event) override
@@ -35,7 +44,6 @@ public:
 	Example()
 	{
 		PushLayer(new ExampleLayer());
-		PushOverlay(new MTEngine::ImGuiLayer());
 	}
 
 	~Example()

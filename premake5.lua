@@ -40,6 +40,7 @@ project "Example"
 	includedirs{
 		"MTEngine/src",
 		"MTEngine/vendor/spdlog/include",
+		"MTEngine/vendor",
 		"%{IncludeDir.glm}"
 	}
 

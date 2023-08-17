@@ -20,8 +20,8 @@ namespace MTEngine {
 		MT_CORE_ASSERT(!s_Instance, "Application already exists!");
 		s_Instance = this;
 
-		m_Window = std::unique_ptr<Window>(Window::Create());
-		m_Window->SetEventCallback(BIND_EVENT_FN(OnEvent));
+		m_ImGuiLayer = new ImGuiLayer();
+		PushOverlay(m_ImGuiLayer);
 	}
 
 	Application::~Application()
@@ -44,7 +44,7 @@ namespace MTEngine {
 	void Application::run()
 	{
 		while(m_Running){
-			glClearColor(1, 0, 1, 1);
+			glClearColor(0.5, 0.5, 0.5, 0.5);
 			glClear(GL_COLOR_BUFFER_BIT);
 
 			for (Layer* layer : m_LayerStack)
