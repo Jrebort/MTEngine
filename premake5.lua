@@ -46,6 +46,7 @@ project "Example"
 
 	links{
 		"MTEngine",
+		"ImGui"
 	}
 
 	filter "system:windows"
