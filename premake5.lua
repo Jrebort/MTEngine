@@ -22,9 +22,10 @@ include "MTEngine/vendor/imgui"
 
 project "MTEngine"
 	location "MTEngine"
-	kind "SharedLib"
+	kind "StaticLib"
 	language "C++" 
-	staticruntime "off"
+	cppdialect "c++17"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -37,6 +38,11 @@ project "MTEngine"
 		"%{prj.name}/src/**.cpp",
 		"%{prj.name}/vendor/glm/glm/**.hpp",
 		"%{prj.name}/vendor/glm/glm/**.inl",
+	}
+
+	defines
+	{
+		"_CRT_SECURE_NO_WARNINGS"
 	}
 
 	includedirs{
@@ -56,7 +62,6 @@ project "MTEngine"
 	}
 
 	filter "system:windows"
-		cppdialect "c++17"
 		systemversion "latest"
 
 
@@ -66,10 +71,6 @@ project "MTEngine"
 			"GLFW_INCLUDE_NONE"
 		}
 		
-		postbuildcommands{
-			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Example/\"")
-		}
-
 	filter "configurations:Debug"
 		defines "MT_DEBUG"
 		runtime "Debug"
@@ -91,7 +92,8 @@ project "Example"
 	location "example"	
 	kind "ConsoleApp"
 	language "C++"
-	staticruntime "off"
+	cppdialect "c++17"
+	staticruntime "on"
 
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
@@ -114,7 +116,6 @@ project "Example"
 	}
 
 	filter "system:windows"
-		cppdialect "c++17"
 		systemversion "latest"
 
 		defines{
