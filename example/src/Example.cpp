@@ -12,7 +12,6 @@ public:
 
 	void OnUpdate() override
 	{
-		//MT_INFO("ExampleLayer::Update");
 		if (MTEngine::Input::IsKeyPressed(MT_KEY_TAB))
 			MT_TRACE("Tab key is pressed (poll)!");
 	}
