@@ -10,8 +10,8 @@ An open source 3D Digital Asset Management Software, 3D digital models can be di
 ### Demo
 ![demo](/asset/demo.png?raw=true "demo")
 
-### acknowledgement
-This software is developed based on **[Hazel Engine](https://github.com/TheCherno/Hazel)** software, thank **Yan Chernikov** very much for your teachin
+### Acknowledgement
+This software is developed based on **[Hazel Engine](https://github.com/TheCherno/Hazel)** software, thank **Yan Chernikov** very much for your teaching
 
 ### License
 This software is licensed under the Apache License, Version 2.0 (January 2004), see [LICENSE](LICENSE) for more details.
