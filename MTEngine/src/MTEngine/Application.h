@@ -6,6 +6,7 @@
 #include "LayerStack.h"
 #include "Events/ApplicationEvent.h"
 
+#include "MTEngine/ImGui/ImGuiLayer.h"
 namespace MTEngine {
 
 	class MTENGINE_API Application
@@ -27,6 +28,7 @@ namespace MTEngine {
 		bool OnWindowClose(WindowCloseEvent& e);
 
 		std::unique_ptr<Window> m_Window;
+		ImGuiLayer* m_ImGuiLayer;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
 	private:

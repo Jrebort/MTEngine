@@ -20,64 +20,12 @@ include "MTEngine/vendor/glfw"
 include "MTEngine/vendor/glad"
 include "MTEngine/vendor/imgui"
 
-
-project "Example"
-	location "example"	
-	kind "ConsoleApp"
-	staticruntime "off"
-
-	language "C++"
-
-
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
-
-	files{
-		"%{prj.name}/src/**.h",
-		"%{prj.name}/src/**.cpp",
-	}
-
-	includedirs{
-		"MTEngine/src",
-		"MTEngine/vendor/spdlog/include",
-		"%{IncludeDir.glm}"
-	}
-
-	links{
-		"MTEngine",
-	}
-
-	filter "system:windows"
-		cppdialect "c++17"
-		systemversion "latest"
-
-		defines{
-			"MT_PLATFORM_WINDOWS",
-		}
-
-	filter "configurations:Debug"
-		defines "MT_DEBUG"
-		runtime "Debug"
-		symbols "on"
-
-
-	filter "configurations:Release"
-		defines "MT_RELEASE"
-		runtime "Release"
-		symbols "on"
-
-
-	filter "configurations:Dist"
-		defines "MT_DIST"
-		runtime "Release"
-		symbols "on"
-	
-
 project "MTEngine"
 	location "MTEngine"
-	kind "SharedLib"
+	kind "StaticLib"
 	language "C++" 
-	staticruntime "off"
+	cppdialect "c++17"
+	staticruntime "on"
 
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
@@ -90,6 +38,11 @@ project "MTEngine"
 		"%{prj.name}/src/**.cpp",
 		"%{prj.name}/vendor/glm/glm/**.hpp",
 		"%{prj.name}/vendor/glm/glm/**.inl",
+	}
+
+	defines
+	{
+		"_CRT_SECURE_NO_WARNINGS"
 	}
 
 	includedirs{
@@ -109,7 +62,6 @@ project "MTEngine"
 	}
 
 	filter "system:windows"
-		cppdialect "c++17"
 		systemversion "latest"
 
 
@@ -119,8 +71,55 @@ project "MTEngine"
 			"GLFW_INCLUDE_NONE"
 		}
 		
-		postbuildcommands{
-			("{COPY} %{cfg.buildtarget.relpath} \"../bin/" .. outputdir .. "/Example/\"")
+	filter "configurations:Debug"
+		defines "MT_DEBUG"
+		runtime "Debug"
+		symbols "on"
+
+
+	filter "configurations:Release"
+		defines "MT_RELEASE"
+		runtime "Release"
+		symbols "on"
+
+
+	filter "configurations:Dist"
+		defines "MT_DIST"
+		runtime "Release"
+		symbols "on"
+
+project "Example"
+	location "example"	
+	kind "ConsoleApp"
+	language "C++"
+	cppdialect "c++17"
+	staticruntime "on"
+
+
+	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
+	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+
+	files{
+		"%{prj.name}/src/**.h",
+		"%{prj.name}/src/**.cpp",
+	}
+
+	includedirs{
+		"MTEngine/src",
+		"MTEngine/vendor/spdlog/include",
+		"MTEngine/vendor",
+		"%{IncludeDir.glm}"
+	}
+
+	links{
+		"MTEngine",
+	}
+
+	filter "system:windows"
+		systemversion "latest"
+
+		defines{
+			"MT_PLATFORM_WINDOWS",
 		}
 
 	filter "configurations:Debug"

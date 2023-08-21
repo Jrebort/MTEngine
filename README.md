@@ -7,6 +7,9 @@ An open source 3D Digital Asset Management Software, 3D digital models can be di
 ### Build
 [windows] `GenerateProject.bat`
 
+### Demo
+![demo](/asset/demo.png?raw=true "demo")
+
 ### Acknowledgement
 This software is developed based on **[Hazel Engine](https://github.com/TheCherno/Hazel)** software, thank **Yan Chernikov** very much for your teaching
 

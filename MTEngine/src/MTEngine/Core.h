@@ -1,11 +1,15 @@
 #pragma once
 
 #ifdef MT_PLATFORM_WINDOWS
+#if MT_DYNAMIC_LINK
 	#ifdef MT_BUILD_DLL
 		#define MTENGINE_API __declspec(dllexport)
 	#else
 		#define MTENGINE_API __declspec(dllimport)
 	#endif
+#else
+	#define MTENGINE_API
+#endif
 #else
 	#error MTEngine only support windows!
 #endif
